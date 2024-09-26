@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quality Control</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      :root {
+        --bg-gradient-from: #ebf8ff;
+        --bg-gradient-to: #e9d8fd;
+        --text-primary: #000000;
+        --black-primary: #000000;
+        --blue-primary: #e2e8f0;
+        --border-color: #ffffff;
+        --bg-input: #f0f4f8;
+        --bg-button: #3498db;
+        --bg-button-hover: #005f8d;
+        --stepper-active-color: #8ccff3;
+        --stepper-completed-color: #005f8d;
+        --stepper-inactive-color: #e2e8f0;
+        --stepper-text-color: #000000;
+      }
+    </style>
+  </head>
+  <body class="bg-white h-screen flex items-center justify-center mx-5">
+    <div class="flex space-x-6">
+      <!-- Main container -->
+      <h1 class="text-3xl font-bold text-centertext-[var(--text-primary)] mb-6">
+        Test
+      </h1>
+      <div
+        class="bg-white p-8 rounded-lg shadow-lg flex flex-col items-center justify-center space-y-8">
+        <div class="w-full">
+          <form id="pdfForm" onsubmit="fetchPopulationData(event)">
+            <div class="mb-4">
+              <label
+                class="block text-[var(--text-primary)] font-semibold mb-2"
+                for="pdfFile1">
+                When pressing the button the USA population data should be shown
+                in the right contiguos component
+              </label>
+            </div>
+            <div class="text-center">
+              <button
+                id="formButton"
+                type="submit"
+                class="bg-[var(--black-primary)] text-white font-semibold py-2 px-4 rounded-lg hover:bg-[var(--bg-button-hover)] focus:outline-none focus:ring-2 focus:ring-[var(--bg-button)] focus:ring-opacity-75">
+                Submit
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div
+        id="populationData"
+        class="bg-gray-100 p-8 rounded-lg shadow-lg w-[350px] h-[400px] overflow-auto">
+        <div class="w-full">
+          <h2 class="text-2xl font-bold mb-4 text-center">Population Data</h2>
+          <div id="populationResults" class="mt-4"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="../static/js/index.js"></script>
+  </body>
+</html>

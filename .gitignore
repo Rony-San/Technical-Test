@@ -1,0 +1,9 @@
+.env
+google_sheet_client_secret.json
+key.txt
+*.pyc
+/venv
+test.py
+.vscode
+node_modules
+/env

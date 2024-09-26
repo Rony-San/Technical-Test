@@ -26,12 +26,11 @@
   <body class="bg-white h-screen flex items-center justify-center mx-5">
     <div class="flex space-x-6">
       <!-- Main container -->
+      <h1 class="text-3xl font-bold text-centertext-[var(--text-primary)] mb-6">
+        Test
+      </h1>
       <div
-        class="bg-white p-8 rounded-lg shadow-lg flex w-[350px] flex-col items-center justify-center space-y-8">
-        <h1
-          class="text-3xl font-bold text-centertext-[var(--text-primary)] mb-6">
-          Test
-        </h1>
+        class="bg-white p-8 rounded-lg shadow-lg flex flex-col items-center justify-center space-y-8">
         <div class="w-full">
           <form id="pdfForm" onsubmit="fetchPopulationData(event)">
             <div class="mb-4">
@@ -46,7 +45,7 @@
               <button
                 id="formButton"
                 type="submit"
-                class="bg-[var(--bg-button)] text-white font-semibold py-2 px-4 rounded-lg hover:bg-[var(--bg-button-hover)] focus:outline-none focus:ring-2 focus:ring-[var(--bg-button)] focus:ring-opacity-75">
+                class="bg-[var(--black-primary)] text-white font-semibold py-2 px-4 rounded-lg hover:bg-[var(--bg-button-hover)] focus:outline-none focus:ring-2 focus:ring-[var(--bg-button)] focus:ring-opacity-75">
                 Submit
               </button>
             </div>

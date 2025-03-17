@@ -1,7 +1,10 @@
 import os
 from flask import Blueprint, jsonify, render_template, request
 
-from app.services.population_services import fetch_population
+from app.models.population import PopulationRecord
+from app.services.population_services_testing import fetch_population_modified
+
+
 
 
 
@@ -15,12 +18,9 @@ def index():
 @main.route('/populations', methods=['GET'])
 def get_analysis():
     try:
-        data = fetch_population()
-        response = {
-            "status": "success",
-            "data": data
-        }
-        return jsonify(response), 200
+        data : list[PopulationRecord]= fetch_population_modified()
+  
+        return jsonify(data), 200
 
     except Exception as e:
 
